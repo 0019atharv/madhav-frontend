@@ -61,5 +61,6 @@ jobs:
         with:
           app-name: 'madhavkitchen'
           slot-name: 'Production'
-          package: .
+          package: ./dist
+        
           
