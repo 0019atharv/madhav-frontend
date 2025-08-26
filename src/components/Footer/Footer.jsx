@@ -1,5 +1,6 @@
 import React from "react";
 import "./Footer.css";
+// import { assets } from "../../assets/frontend_assets/assets";
 import { assets } from "../../assets/frontend_assets/assets";
 
 const Footer = () => {
@@ -7,12 +8,9 @@ const Footer = () => {
     <div className="footer" id="footer">
       <div className="footer-content">
         <div className="footer-content-left">
-          <img src={assets.logo} alt="" />
+          <img id="logo" src={assets.logo} alt="" />
           <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cumque
-            nostrum iure suscipit maiores non harum incidunt unde magnam
-            molestias ipsum qui vel aut natus aspernatur ipsa dignissimos,
-            numquam assumenda deserunt.
+            Yahaan khaana sirf banta nahi, yaadein banti hain.
           </p>
           <div className="footer-social-icons">
             <img src={assets.facebook_icon} alt="" />
@@ -32,14 +30,14 @@ const Footer = () => {
         <div className="footer-content-right">
           <h2>Get in touch</h2>
           <ul>
-            <li>+92-308-4900522</li>
-            <li>contact@tomato.com</li>
+            <li>+91 8527159685</li>
+            <li>akhildhakrey2002@gmail.com</li>
           </ul>
         </div>
       </div>
       <hr />
       <p className="footer-copyright">
-        Copyright 2024 @ Tomato.com - All Right Reserved.
+        Copyright 2025 @ Madhavskitchen.me - All Right Reserved.
       </p>
     </div>
   );
