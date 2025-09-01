@@ -8,9 +8,9 @@ import { toast } from "react-toastify";
 const Navbar = ({ setShowLogin }) => {
   const [menu, setMenu] = useState("home");
   const { getTotalCartAmount, token, setToken } = useContext(StoreContext);
-  const navigate=useNavigate();
+  const navigate = useNavigate();
 
-  const logout=()=>{
+  const logout = () => {
     localStorage.removeItem("token");
     setToken("");
     toast.success("Logout Successfully")
@@ -29,27 +29,29 @@ const Navbar = ({ setShowLogin }) => {
         >
           Home
         </Link>
-        <a
+        {/* <a
           href="#explore-menu"
           onClick={() => setMenu("menu")}
           className={menu === "menu" ? "active" : ""}
         >
           Menu
-        </a>
-        {/* <a
-          href="#app-download"
-          onClick={() => setMenu("mobile-app")}
-          className={menu === "mobile-app" ? "active" : ""}
-        >
-          mobile-app
         </a> */}
         <a
-          href="#footer"
-          onClick={() => setMenu("contact-us")}
-          className={menu === "contact-us" ? "active" : ""}
+          href="/about"
+          onClick={() => setMenu("aboutus")}
+          className={menu === "aboutus" ? "active" : ""}
+        >
+          About Us
+        </a>
+
+        <a
+          href="/contactus"
+          onClick={() => setMenu("contactus")}
+          className={menu === "contactus" ? "active" : ""}
         >
           Contact Us
         </a>
+
       </ul>
       <div className="navbar-right">
         <img src={assets.search_icon} alt="" />
@@ -65,7 +67,7 @@ const Navbar = ({ setShowLogin }) => {
           <div className="navbar-profile">
             <img src={assets.profile_icon} alt="" />
             <ul className="nav-profile-dropdown">
-              <li onClick={()=>navigate("/myorders")}><img src={assets.bag_icon} alt="" /><p>Orders</p></li>
+              <li onClick={() => navigate("/myorders")}><img src={assets.bag_icon} alt="" /><p>Orders</p></li>
               <hr />
               <li onClick={logout}><img src={assets.logout_icon} alt="" /><p>Logout</p></li>
             </ul>

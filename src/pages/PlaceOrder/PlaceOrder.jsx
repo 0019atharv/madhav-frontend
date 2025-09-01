@@ -47,8 +47,9 @@ const PlaceOrder = () => {
     });
 
     if (response.data.success) {
-      const { session_url } = response.data;
-      window.location.replace(session_url);
+      // const { session_url } = response.data;
+      // window.location.replace(session_url);
+      navigate("/thank-you");
     } else {
       toast.error("Something went wrong!");
     }
@@ -117,7 +118,7 @@ const PlaceOrder = () => {
               </b>
             </div>
           </div>
-          <button type="submit">PROCEED TO PAYMENT</button>
+          <button type="submit">Order Now</button>
         </div>
       </div>
     </form>
